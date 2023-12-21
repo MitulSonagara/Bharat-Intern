@@ -31,28 +31,83 @@ input {
   outline: none;
 }
 
-.right {
+.left {
+  display: grid;
+  place-items: center;
+}
+
+.welcome {
+  width: 70%;
   text-align: center;
-  justify-content: center;
+  vertical-align: middle;
+  margin-top: 40px;
+}
+
+.left .logo {
+  filter: brightness(0.3) invert(1);
+  width: 200px;
+  height: auto;
+  padding-top: 70px;
+  margin-bottom: 50px;
+}
+
+.text{
+  color: #ffffff;
+  font-size: medium;
+}
+.line {
+  border-bottom: 3px solid #ffffff;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  position: relative
+}
+
+.signup-login-links {
+  margin-top: 20px;
+}
+
+.signup-login-links p {
+  margin: 0;
+}
+
+.signup-login-links a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #002233;
+}
+
+.right{
+  display: grid;
+  place-items: center;
 }
 
 .signup {
-  padding: 100px;
+  width: 70%;
+  text-align: center;
+  vertical-align: middle;
 }
 
-
-.signup>h2 {
+h2 {
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 6px;
   color: rgba(35, 35, 35, 0.96);
 }
 
-.signup>h3 {
+h3 {
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 30px;
   color: rgba(35, 35, 35, 0.96);
+}
+
+.welcome h2{
+  color: #ffffff;
 }
 
 .form {
@@ -124,6 +179,16 @@ input:focus {
   font-weight: 600;
 }
 
+.signup .links {
+  text-align: right;
+}
+
+.signup .links>a {
+
+  color: #216ce7;
+  text-decoration: none;
+}
+
 .signup p {
   margin: 0 0 22px;
   color: #778395;
@@ -132,4 +197,16 @@ input:focus {
 .signup p>a {
   color: #216ce7;
   text-decoration: none;
+}
+
+@media only screen and (max-width:600px) {
+  body {
+    background: #00324b;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .right {
+    display: none;
+  }
 }
