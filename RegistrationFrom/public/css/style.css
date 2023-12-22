@@ -34,6 +34,7 @@ input {
 .left {
   display: grid;
   place-items: center;
+  overflow: auto;
 }
 
 .welcome {
@@ -66,19 +67,20 @@ input {
   position: relative
 }
 
-.signup-login-links {
-  margin-top: 20px;
+.lower{
+  margin-top: auto;
 }
 
-.signup-login-links p {
-  margin: 0;
+.a{
+  margin: 0 5px;
+  color: #ffffff;
 }
 
-.signup-login-links a {
-  display: block;
-  margin-top: 10px;
+.link{
   text-decoration: none;
-  color: #002233;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: larger;
 }
 
 .right{
@@ -204,6 +206,15 @@ input:focus {
     background: #00324b;
     display: grid;
     grid-template-columns: 100%;
+  }
+
+  .welcome{
+    margin-top: 30px;
+  }
+
+  .welcome .logo{
+    padding-top: 50px;
+    margin-bottom: 30px;
   }
 
   .right {

@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background: url(../img/wave-haikei.svg) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+button,
+input {
+    border: 0;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.left {
+    display: grid;
+    place-items: center;
+    overflow: auto;
+}
+
+.welcome {
+    width: 70%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 40px;
+}
+
+.logo {
+    filter: brightness(0.3) invert(1);
+    width: 200px;
+    height: auto;
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+.text {
+    color: #ffffff;
+    font-size: medium;
+}
+
+.line {
+    border-bottom: 3px solid #ffffff;
+}
+
+.socials img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    position: relative
+}
+
+.lower {
+    margin-top: auto;
+}
+
+.a {
+    margin: 0 5px;
+    color: #ffffff;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.right {
+    display: grid;
+    place-items: center;
+}
+
+.right .logo {
+    display: none;
+}
+
+.signup {
+    width: 70%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: rgba(35, 35, 35, 0.96);
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: rgba(35, 35, 35, 0.96);
+}
+
+.welcome h2 {
+    color: #ffffff;
+}
+
+.form {
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.textbox span {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 0;
+    font-size: 22px;
+    pointer-events: none;
+    color: rgba(35, 35, 35, 0.96);
+}
+
+.textbox input {
+    padding: 0 24px 0 36px;
+    border-bottom: 2px solid #2b3442;
+    color: rgba(35, 35, 35, 0.96);
+    height: 72px;
+}
+
+:is(input:focus, input:valid)~label {
+    translate: -40px -40px;
+    scale: 0.875;
+}
+
+input:focus~label {
+    color: #216ce7;
+}
+
+input:focus {
+    border-color: #216ce7;
+}
+
+:is(input:focus, input:valid)~span {
+    color: #216ce7;
+}
+
+.textbox label {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    translate: 0 -50%;
+    color: rgba(35, 35, 35, 0.96);
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.form button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: #002233;
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.signup .links {
+    text-align: right;
+}
+
+.signup .links>a {
+
+    color: #216ce7;
+    text-decoration: none;
+}
+
+.signup p {
+    margin: 0 0 22px;
+    color: #778395;
+}
+
+.signup p>a {
+    color: #216ce7;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        /* background: #00324b; */
+        background: url(../img/wave-haikei-vertical.svg) no-repeat center;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right .logo {
+        display: block;
+        margin: 0;
+        padding: 0%;
+        height: 100px;
+        width: auto;
+        position: absolute;
+        top: 4%;
+    }
+
+    .signup {
+        margin-top: 32%;
+    }
+
+    .signup h3 {
+        margin-bottom: 20px;
+    }
+
+    .form {
+        gap: 12px;
+    }
+}
