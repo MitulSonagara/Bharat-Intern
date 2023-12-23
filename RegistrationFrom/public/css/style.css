@@ -11,7 +11,7 @@ body {
   box-sizing: border-box;
   background: url(../img/wave-haikei.svg) no-repeat center;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,7 +34,6 @@ input {
 .left {
   display: grid;
   place-items: center;
-  overflow: auto;
 }
 
 .welcome {

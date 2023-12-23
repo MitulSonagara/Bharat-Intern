@@ -1,19 +1,19 @@
 <div class="signup">
     <h2>Sign Up</h2>
     <h3>It's quick & simple</h3>
-    <form class="form">
+    <form class="form" method="post" action="/signup">
         <div class="textbox">
-            <input type="text" required />
+            <input type="text" name="name" required />
             <label>Name</label>
             <span class="material-symbols-outlined"> account_circle </span>
         </div>
         <div class="textbox">
-            <input type="text" required />
+            <input type="text" name="email" required />
             <label>Email</label>
             <span class="material-symbols-outlined"> email </span>
         </div>
         <div class="textbox">
-            <input type="password" required />
+            <input type="password" name="password" required />
             <label>Password</label>
             <span class="material-symbols-outlined"> key </span>
         </div>
