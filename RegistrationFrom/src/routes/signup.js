@@ -42,27 +42,16 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.post('/login', (req, res, next) => {
-    passport.authenticate('local', { session: false }, (err, user, info) => {
-        if (err) {
-            return res.json({ success: false, message: err });
-        }
-
-        if (!user) {
-            return res.json({ success: false, message: 'Username or password incorrect' });
-        }
-
-        req.logIn(user, { session: false }, (err) => {
-            if (err) {
-                return res.json({ success: false, message: 'Authentication failed' });
-            }
-
-            const token = jwt.sign({ userId: user._id, username: user.username }, 'your-secret-key', { expiresIn: '24h' });
-
-            return res.json({ success: true, message: 'Authentication successful', token: token });
-        });
-    })(req, res, next);
-});
+router.post(
+    '/login',
+    passport.authenticate('local', {
+        failureRedirect: '/login',
+        successRedirect: '/dashboard',
+    }),
+    (req, res) => {
+        console.log(req.user);
+    }
+);
 
 
 module.exports = router;

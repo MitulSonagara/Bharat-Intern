@@ -22,7 +22,7 @@ app.use(
   session({
     secret: 'my-secreysfa-mjiadfsn',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
   })
 );
 app.use(passport.initialize());
@@ -32,7 +32,7 @@ app.set('view engine', 'hbs');
 app.set('views', 'views');
 hbs.registerPartials('views/partials');
 
-passport.use(new LocalStrategy(User.authenticate()));
+passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -48,6 +48,7 @@ async function main() {
   console.log('Database connected');
 }
 
-app.listen(4000, () => {
+app.listen(4040, () => {
   console.log('Server started on port 4000');
 });
+ 
